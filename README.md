@@ -1,4 +1,4 @@
-# portfolio_nv
+# portfolio new version
 This is the new version of my presentation project. 
 
 ## Technologies
