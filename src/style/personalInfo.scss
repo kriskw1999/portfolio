@@ -1,0 +1,96 @@
+@import "variables";
+
+.personal-info-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  background-image: linear-gradient(rgba(29, 31, 41, 0.9), rgba(12, 12, 17, 0.9)), url("../assets/rainy_milan .webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+
+  & .content {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+  }
+
+  & .header {
+    font-size: $text-big;
+    color: white;
+  }
+
+  & .sphere-container {
+    width: 50%;
+  }
+
+  & .info-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    background: rgba(121, 121, 121, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-sizing: border-box;
+    padding: 80px 40px;
+
+    & span {
+      font-size: $text-medium;
+      color: white;
+    }
+
+
+    & .info-type {
+      margin-right: 10px;
+      color: $primary-accent-color;
+    }
+
+    & .link {
+      font-size: $text-medium;
+      color: white;
+    }
+  }
+
+  & .canvas {
+    width: 100%;
+    height: 100%
+  }
+
+  @media only screen and (max-width: 1300px) {
+    height: 130vh;
+
+    & .info-card {
+      padding: 40px 20px;
+      width: 100%;
+      height: 100%;
+
+      & span {
+        font-size: $text-x-small;
+      }
+
+      & .link {
+        font-size: $text-x-small;
+      }
+    }
+
+
+    & .sphere-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    & .content {
+      flex-direction: column;
+      padding: 20px;
+    }
+  }
+}
+

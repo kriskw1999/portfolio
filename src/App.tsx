@@ -1,33 +1,16 @@
-import './style/main.scss'
-import profileImage from './assets/me_no_bg.png'
+import "./style/main.scss";
 import SkillsSection from "./components/SkillsSection.tsx";
+import MainSection from "./components/MainSection.tsx";
+import PersonalInfo from "./components/PersonalInfo.tsx";
 
 function App() {
-    return (
-        <>
-            <div className='main-container'>
-                <div className='text-name text-name-1'>
-                    Krzysztof Witkowski
-                </div>
-
-                <div className='text-position text-position-1'>
-                    Frontend Engineer
-                </div>
-
-                <div className='text-name text-name-2'>
-                    Krzysztof Witkowski
-                </div>
-
-                <div className='text-position text-position-2'>
-                    Frontend Engineer
-                </div>
-                <img className='profile-image' src={profileImage} alt='picture of myself'/>
-            </div>
-
-            <SkillsSection/>
-
-        </>
-    )
+  return (
+    <>
+      <MainSection />
+      <SkillsSection />
+      <PersonalInfo />
+    </>
+  );
 }
 
-export default App
+export default App;

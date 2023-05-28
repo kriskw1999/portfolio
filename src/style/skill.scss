@@ -1,0 +1,135 @@
+@import "variables";
+
+.skill-section {
+  height: 100vh;
+  background-image: linear-gradient(0, rgba(29, 31, 41, .9), rgba(29, 31, 41, .9)), url('../assets/rainy_rome.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+.divider {
+  background: linear-gradient(90deg, $primary-color, $primary-accent-color);
+  min-width: 200px;
+  height: 8px;
+  border-radius: 15px;
+  margin-top: 100px;
+}
+
+.skill-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 40px;
+  overflow: auto;
+  padding: 50px 0;
+  box-sizing: border-box;
+  justify-content: start;
+}
+
+.skill-container::-webkit-scrollbar {
+  display: none;
+}
+
+.language-logo {
+  height: 60px;
+}
+
+.skill-card {
+  color: white;
+  padding: 40px 60px;
+  min-width: 400px;
+  height: 100%;
+  background: rgba(121, 121, 121, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.skill-carousel {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-icon {
+  height: 60px;
+  width: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  cursor: pointer;
+
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all .4s ease-in-out;
+
+    & rect {
+      fill: #9D4A38;
+      transition: all .4s ease-in-out;
+    }
+  }
+
+  &.right-arrow {
+    transform: rotate(180deg);
+
+    &:hover {
+      transform: scale(1.1) rotate(180deg);
+    }
+  }
+}
+
+
+.skill-header {
+  font-size: $text-big;
+  color: white;
+}
+
+.card-header {
+  font-size: $text-medium;
+  color: white;
+  font-weight: bold;
+}
+
+.card-description {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .arrow-icon {
+    display: none;
+  }
+
+  .skill-card {
+    min-width: 100%;
+  }
+
+  .skill-container {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .divider {
+    margin-top: 50px;
+  }
+}
