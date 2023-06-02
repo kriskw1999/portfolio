@@ -1,18 +1,12 @@
 import React, { useCallback, useEffect, useRef } from "react";
-import VanillaTilt, { HTMLVanillaTiltElement, TiltOptions } from "vanilla-tilt";
+import VanillaTilt, { HTMLVanillaTiltElement } from "vanilla-tilt";
+import { tiltOptions } from "../tilt.ts";
 
 type Props = {
   name: string;
   logo: string;
   description: string;
   onClick: (cardRef: HTMLDivElement) => void;
-};
-
-const tiltOptions: TiltOptions = {
-  max: 5,
-  speed: 400,
-  glare: true,
-  "max-glare": 0.5,
 };
 
 const SkillCard: React.FC<Props> = ({ name, logo, onClick, description }) => {

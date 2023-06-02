@@ -1,4 +1,6 @@
 import profileImage from "../assets/me_no_bg.webp";
+import downArrow from "../assets/down-arrow.svg";
+import mouseSVG from "../assets/mouse.svg";
 
 const MainSection = () => {
   return (
@@ -16,6 +18,15 @@ const MainSection = () => {
         src={profileImage}
         alt="picture of myself"
       />
+
+      <div className="scroll-down">
+        <img className="mouse" src={mouseSVG} alt="scroll down mouse" />
+        <img
+          className="arrow"
+          src={downArrow}
+          alt="arrow pointing to the bottom"
+        />
+      </div>
     </div>
   );
 };

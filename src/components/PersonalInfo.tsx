@@ -1,58 +1,67 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../style/personalInfo.scss";
 import Sphere from "./ThreeScene.tsx";
+import VanillaTilt, { HTMLVanillaTiltElement } from "vanilla-tilt";
+import { tiltOptions } from "../tilt.ts";
 
 const PersonalInfo: React.FC = () => {
+  const cardRef = useRef<HTMLVanillaTiltElement & HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!cardRef.current) return;
+
+    VanillaTilt.init(cardRef.current, tiltOptions);
+  }, []);
+
   return (
     <div className="personal-info-container">
       <div className="divider" />
       <h1 className="header">Personal Info</h1>
       <div className="content">
-        <div className="info-card">
-          <div className="info-paragraph">
+        <div ref={cardRef} className="info-card">
+          <div className="field-name">
             <span className="info-type">Name:</span>
-            <span>Krzysztof Witkowski</span>
-          </div>
-          <div className="info-paragraph">
-            <span className="info-type">Address:</span>
-            <span>Bernardino Verro street 17 Milan</span>
-          </div>
-          <div className="info-paragraph">
+            <span className="info-type">Location:</span>
             <span className="info-type">Phone:</span>
-            <span>+39 392 470 4791</span>
-          </div>
-          <div className="info-paragraph">
             <span className="info-type">Gmail:</span>
-            <span>kriskw1999@gmail.com</span>
-          </div>
-          <div className="info-paragraph">
             <span className="info-type">Github:</span>
+            <span className="info-type">Linkedin:</span>
+            <span className="info-type">HackerRank:</span>
+          </div>
+
+          <div className="field-value">
+            <span>Krzysztof Witkowski</span>
+            <span>Milan</span>
+
+            <span>+39 392 470 4791</span>
+            <a
+              className="link"
+              target="_blank"
+              href="mailto:kriskw1999@gmail.com"
+            >
+              kriskw1999@gmail.com
+            </a>
+
             <a
               className="link"
               target="_blank"
               href="https://github.com/kriskw1999"
             >
-              Check out my projects
+              Projects
             </a>
-          </div>
-          <div className="info-paragraph">
-            <span className="info-type">Linkedin:</span>
             <a
               className="link"
               target="_blank"
               href="https://www.linkedin.com/in/krzysztof-witkowski-39ba2b1a4/"
             >
-              Connect with me
+              Connect
             </a>
-          </div>
-          <div className="info-paragraph">
-            <span className="info-type">HackerRank:</span>
             <a
               className="link"
               target="_blank"
               href="https://www.hackerrank.com/kriskw1999?hr_r=1"
             >
-              Check out my HackerRank profile
+              Profile
             </a>
           </div>
         </div>

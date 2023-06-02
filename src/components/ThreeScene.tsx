@@ -36,10 +36,13 @@ function Sphere() {
       // Add ambient light to the scene
       const pointLight = new THREE.PointLight(0xffffff);
       const globalLight = new THREE.AmbientLight(0xffffff, 0.5);
-      pointLight.position.set(5, 5, 10);
+      pointLight.position.set(100, 100, 100);
       scene.add(pointLight, globalLight);
 
       const controls = new OrbitControls(camera, renderer.domElement);
+      controls.maxDistance = 40;
+      controls.minDistance = 12;
+      controls.enableRotate = false;
 
       // const lightHelper = new THREE.PointLightHelper(pointLight);
       // scene.add(lightHelper);
@@ -60,6 +63,8 @@ function Sphere() {
 
       const material = new THREE.MeshStandardMaterial({
         map: texture,
+        roughness: 0.5,
+        fog: true,
       });
       const sphere = new THREE.Mesh(geometry, material);
 

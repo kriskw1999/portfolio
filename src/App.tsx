@@ -5,11 +5,11 @@ import PersonalInfo from "./components/PersonalInfo.tsx";
 
 function App() {
   return (
-    <>
+    <div className="container">
       <MainSection />
       <SkillsSection />
       <PersonalInfo />
-    </>
+    </div>
   );
 }
 
