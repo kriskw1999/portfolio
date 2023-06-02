@@ -1,7 +1,11 @@
 import "./style/main.scss";
-import SkillsSection from "./components/SkillsSection.tsx";
 import MainSection from "./components/MainSection.tsx";
-import PersonalInfo from "./components/PersonalInfo.tsx";
+import React from "react";
+
+const PersonalInfo = React.lazy(() => import("./components/PersonalInfo.tsx"));
+const SkillsSection = React.lazy(
+  () => import("./components/SkillsSection.tsx")
+);
 
 function App() {
   return (
