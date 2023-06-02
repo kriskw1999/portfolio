@@ -16,17 +16,17 @@ const PersonalInfo: React.FC = () => {
   return (
     <div className="personal-info-container">
       <div className="divider" />
-      <h1 className="header">Personal Info</h1>
+      <h1 className="header">About me</h1>
       <div className="content">
         <div ref={cardRef} className="info-card">
           <div className="field-name">
-            <span className="info-type">Name:</span>
-            <span className="info-type">Location:</span>
-            <span className="info-type">Phone:</span>
-            <span className="info-type">Gmail:</span>
-            <span className="info-type">Github:</span>
-            <span className="info-type">Linkedin:</span>
-            <span className="info-type">HackerRank:</span>
+            <span className="info-type">Name</span>
+            <span className="info-type">Location</span>
+            <span className="info-type">Phone</span>
+            <span className="info-type">Gmail</span>
+            <span className="info-type">Github</span>
+            <span className="info-type">Linkedin</span>
+            <span className="info-type">HackerRank</span>
           </div>
 
           <div className="field-value">

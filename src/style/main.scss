@@ -11,15 +11,17 @@ body {
   overflow: hidden;
 }
 
-.container {
-  overflow: auto;
-  height: 100vh;
-  scroll-snap-type: y proximity;
-  scroll-behavior: smooth;
+.header {
+  font-size: $text-big;
+  color: white;
+
+  @media only screen and (max-width: 600px) {
+    font-size: $text-medium;
+  }
 }
 
 .main-container {
-  height: 100vh;
+  height: 100dvh;
   background-image: $black-scream, url("../assets/city_bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
@@ -88,7 +90,7 @@ body {
   animation-delay: 6s;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $mobile-breakpoint) {
   .text-name, .text-position {
     font-size: $text-small;
   }
@@ -97,10 +99,17 @@ body {
 // Scrollbar
 .container {
   overflow: auto;
+  height: 100dvh;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
     width: 1em;
     background-color: $background-color;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      display: none;
+    }
   }
 
   &::-webkit-scrollbar-track {

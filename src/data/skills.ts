@@ -1,11 +1,11 @@
-import jsLogo from "../assets/js-icon.webp";
-import tsLogo from "../assets/ts-icon.webp";
-import reactLogo from "../assets/react-icon.webp";
-import vueLogo from "../assets/vue-icon.webp";
-import nuxtLogo from "../assets/nuxt-icon.webp";
-import nextLogo from "../assets/next-icon.webp";
-import tailwindLogo from "../assets/tailwind-icon.webp";
-import gitLogo from "../assets/git-icon.webp";
+import jsLogo from "../assets/icons/js.svg";
+import tsLogo from "../assets/icons/ts.svg";
+import reactLogo from "../assets/icons/react.svg";
+import vueLogo from "../assets/icons/vue.svg";
+import nuxtLogo from "../assets/icons/nuxt.svg";
+import nextLogo from "../assets/icons/next.svg";
+import tailwindLogo from "../assets/icons/tailwind.svg";
+import gitLogo from "../assets/icons/git.svg";
 
 export type Skill = {
   name: string;

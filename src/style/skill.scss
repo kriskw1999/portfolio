@@ -1,7 +1,7 @@
 @import "variables";
 
 .skill-section {
-  height: 100vh;
+  height: 100dvh;
   background-image: linear-gradient(0, rgba(29, 31, 41, .9), rgba(29, 31, 41, .9)), url('../assets/rainy_rome.webp');
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,7 +20,18 @@
   min-width: 200px;
   height: 8px;
   border-radius: 15px;
-  margin-top: 100px;
+  margin-top: 60px;
+}
+
+
+
+.skill-container::-webkit-scrollbar {
+  display: none;
+}
+
+.language-logo {
+  height: 60px;
+  max-width: 60px;
 }
 
 .skill-container {
@@ -29,35 +40,32 @@
   display: flex;
   gap: 40px;
   overflow: auto;
-  padding: 50px 0;
   box-sizing: border-box;
   justify-content: start;
-}
 
-.skill-container::-webkit-scrollbar {
-  display: none;
-}
+  & .skill-card {
+    color: white;
+    padding: 40px;
+    min-width: 450px;
+    max-height: 600px;
+    background: rgba(121, 121, 121, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+    box-sizing: border-box;
 
-.language-logo {
-  height: 60px;
-}
-
-.skill-card {
-  color: white;
-  padding: 40px 60px;
-  min-width: 400px;
-  height: 100%;
-  background: rgba(121, 121, 121, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-  box-sizing: border-box;
+    @media only screen and (max-width: $mobile-breakpoint) {
+      min-width: 100%;
+      gap: 12px;
+      padding: 20px;
+    }
+  }
 }
 
 .skill-carousel {
@@ -98,12 +106,6 @@
   }
 }
 
-
-.skill-header {
-  font-size: $text-big;
-  color: white;
-}
-
 .card-header {
   font-size: $text-medium;
   color: white;
@@ -114,6 +116,7 @@
   font-size: 22px;
   color: white;
   text-align: center;
+    line-height: 1.5;
 }
 
 @media only screen and (max-width: 600px) {

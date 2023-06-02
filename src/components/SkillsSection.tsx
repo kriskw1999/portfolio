@@ -81,7 +81,7 @@ const SkillsSection = () => {
     <div className="skill-section">
       <div className="divider" />
 
-      <h1 className="skill-header">Skills</h1>
+      <h1 className="header">Skills</h1>
 
       <div
         className="skill-carousel"

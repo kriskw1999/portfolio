@@ -3,7 +3,7 @@
 .personal-info-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100dvh;
   padding-bottom: 40px;
   align-items: center;
   background-image: linear-gradient(rgba(29, 31, 41, 0.9), rgba(12, 12, 17, 0.9)), url("../assets/rainy_milan .webp");
@@ -21,10 +21,6 @@
     padding: 20px 40px;
   }
 
-  & .header {
-    font-size: $text-big;
-    color: white;
-  }
 
   & .sphere-container {
     width: 50%;
@@ -35,7 +31,7 @@
     justify-content: center;
     width: 50%;
     height: 100%;
-    gap: 12px;
+    gap: 36px;
     background: rgba(121, 121, 121, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -45,11 +41,13 @@
     padding: 120px 40px;
 
     & .field-name {
+      padding-right: 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: end;
       font-weight: bold;
+      border-right: solid 3px $primary-color;
     }
 
     & .field-value {
