@@ -1,7 +1,7 @@
-@import "animations";
-@import "variables";
+@import 'variables';
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: 'rubik', serif;
@@ -9,120 +9,107 @@ html, body {
 
 body {
   overflow: hidden;
-}
-
-.header {
-  font-size: $text-big;
   color: white;
-
-  @media only screen and (max-width: 600px) {
-    font-size: $text-medium;
-  }
 }
 
-.main-container {
-  height: 100dvh;
-  background-image: $black-scream, url("../assets/city_bg.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  flex-direction: column;
-  overflow: hidden;
-  position: relative;
-  scroll-snap-align: start;
-}
-
-.scroll-down {
-    position: absolute;
-    bottom: 20px;
-    right: 40px;
-  display: flex;
-  flex-direction: column;
-
-  & .mouse {
-    width: 20px;
-    height: 35px;
-  }
-
-  & .arrow {
-    width: 20px;
-    height: 20px;
-    margin-top: 5px;
-    animation: opacity-in 3s ease-in-out infinite;
-  }
-}
-
-.profile-image {
-  object-fit: cover;
-  height: 90vh;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  bottom: 0;
-}
-
-.text-name, .text-position {
-  width: 100%;
-  position: absolute;
-  font-size: $text-big;
-  color: white;
-  user-select: none;
-}
-
-.text-name {
-  animation: slide-right 12s linear infinite;
-  left: 100%;
-  top: 200px;
-}
-
-.text-position {
-  animation: slide-left 12s linear infinite;
-  left: -100%;
-  top: 300px;
-  text-align: end;
-}
-
-.text-name-1, .text-position-1 {
-  animation-delay: 0s;
-}
-
-.text-name-2, .text-position-2 {
-  animation-delay: 6s;
-}
-
-@media only screen and (max-width: $mobile-breakpoint) {
-  .text-name, .text-position {
-    font-size: $text-small;
-  }
-}
-
-// Scrollbar
 .container {
+  background-color: $background-color;
   overflow: auto;
   height: 100dvh;
-  scroll-snap-type: y proximity;
-  scroll-behavior: smooth;
+  padding: 100px 100px 60px 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  @media only screen and (max-width: $mobile-breakpoint) {
-    scroll-snap-type: none;
+  @media (max-width: $mobile-breakpoint) {
+    padding: 100px 20px 20px 20px;
   }
+}
 
-  &::-webkit-scrollbar {
-    width: 1em;
-    background-color: $background-color;
+.full-name {
+  font-size: $text-big;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+}
 
-    @media only screen and (max-width: $mobile-breakpoint) {
-      display: none;
+.job-title {
+  font-size: $text-x-small;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 30px;
+  background-color: white;
+  animation: blink 0.8s infinite;
+}
+
+.terminal-container {
+  display: flex;
+}
+
+.terminal-text {
+  font-size: $text-small;
+  font-style: italic;
+  letter-spacing: 3px;
+}
+
+.hidden-input {
+  width: 0;
+  height: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  align-items: center;
+
+  & .contact-cta {
+    // nice white button
+    background-color: white;
+    color: $background-color;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $text-xx-small;
+    cursor: pointer;
+    display: flex;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    &:active {
+      background-color: #e0e0e0;
     }
   }
 
-  &::-webkit-scrollbar-track {
-    box-shadow: 0 0 6px rgba(51, 51, 51, 0.3);
+  & img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
   }
+}
 
-  &::-webkit-scrollbar-thumb {
-    border-radius: 15px;
-    background: linear-gradient(0deg, $primary-color, $primary-accent-color);
-    border: solid $background-color 4px;
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
