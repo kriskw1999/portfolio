@@ -4,9 +4,9 @@ frontend:
     preBuild:
       commands:
         - yarn install
-        - tsc -v
     build:
       commands:
+        - npm run tsc
         - npm run build
   artifacts:
     baseDirectory: dist
