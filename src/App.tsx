@@ -1,6 +1,6 @@
 import Footer from './components/footer'
 import GithubIcon from './components/githubIcon'
-import MainSection from './components/mainSection'
+import MainSection from './components/mainSections'
 import './style/main.scss'
 
 function App() {
