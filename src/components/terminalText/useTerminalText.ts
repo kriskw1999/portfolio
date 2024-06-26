@@ -4,7 +4,7 @@ import { MESSAGES_TO_DISPLAY } from '../../config'
 export const useTerminalText = (text: string) => {
   const [messageToShow, setMessageToShow] = useState<string>('')
   const [extraCharacterNumber, setExtraCharacterNumber] = useState<number>(0)
-  const interval = useRef<NodeJS.Timeout>()
+  const interval = useRef<any>()
 
   useEffect(() => {
     if (!interval.current)
